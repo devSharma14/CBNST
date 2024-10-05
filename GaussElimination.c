@@ -6,20 +6,20 @@ int main() {
     int n; 
     printf("Enter the size of the matrix -> ");
     scanf("%d", &n);
-    int mat[n][n+1];
+    float mat[n][n+1];
 
     // Step 1 : Input the matrix
     printf("Enter details for the augmented matrix : \n");
     for(int i=0; i<n; i++) {
         for(int j=0; j<n+1; j++) {
             printf("mat[%d][%d] -> ", i, j);
-            scanf("%d", &mat[i][j]);
+            scanf("%f", &mat[i][j]);
         }
     }
     printf("\nMatrix : \n");
     for(int i=0; i<n; i++) {
         for(int j=0; j<n+1; j++) {
-            printf("%d \t", mat[i][j]);
+            printf("%f \t", mat[i][j]);
         }
         printf("\n");
     }
@@ -35,7 +35,7 @@ int main() {
             for(int col=0; col<n+1; col++) {
                 mat[row][col] = mat[row][col] - (coeff * mat[i][col]);
                 if(mat[row][col] == -0.0) {
-                    mat[row][col] = 0;
+                    mat[row][col] = 0.0;
                 }
             }
         }
@@ -43,7 +43,7 @@ int main() {
    printf("\nUpper triangular matrix : \n");
    for(int i=0; i<n; i++) {
         for(int j=0; j<n+1; j++) {
-            printf("%d \t", mat[i][j]);
+            printf("%f \t", mat[i][j]);
         }
         printf("\n");
     }

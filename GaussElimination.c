@@ -23,7 +23,6 @@ int main() {
         }
         printf("\n");
     }
-
     // Step 2 : Convert it into upper triangular matrix
     for(int i=0; i<n; i++) {
         for(int j=0; j<n; j++) {
@@ -33,13 +32,6 @@ int main() {
                     mat[j][k] = mat[j][k] - coeff * mat[i][k];
                 }
             }
-        }
-        printf("Intermediate form : \n");
-        for(int i=0; i<n; i++) {
-            for(int j=0; j<n+1; j++) {
-                printf("%f \t", mat[i][j]);
-            }
-            printf("\n");
         }
     }
    printf("\nUpper triangular matrix : \n");

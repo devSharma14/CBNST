@@ -49,7 +49,7 @@ int main() {
 
     for(int i=1; i<n; i++) {
         p = p * (u - (i - 1));  // Update p
-        res += (p * y[0][i]) / i;  // Add next term in the interpolation series
+        res += (p * y[0][i]) / tgamma(i+1);  // Add next term in the interpolation series
     }
 
     // Step 5: Print the interpolated result
